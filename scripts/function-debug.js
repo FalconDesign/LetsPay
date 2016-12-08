@@ -459,7 +459,7 @@ var splashBLockNews = function splashBLockNews() {
       header = $('.main-header-fixed'),
       shadow = $('.shadow'),
       popUpContainer = $('.pop-up-container'),
-      article = $('article.one');
+      article = $('.one');
 
   readAlls.on('click', function (evt) {
     var $this = $(evt.currentTatget),
