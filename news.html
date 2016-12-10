@@ -3,11 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>News</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+    #load-spinner {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      z-index: 10000;
+      background: linear-gradient(#87c3ed, #d6f08f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    </style>
   </head>
   <body>
+    <div id="load-spinner">
+      <div class="loader"></div>
+    </div>
     <div id="page-news">
       <main class="page-container">
         <header class="main-header-fixed">
@@ -27,7 +42,7 @@
                   </div>
                   <div class="sign-in">
                     <button type="submit" class="signin-btn">Войти</button>
-                    <button class="reg-btn">Зарегистрироваться</button>
+                    <button type="submit" class="reg-btn">Зарегистрироваться</button>
                   </div>
                 </div>
               </form>
@@ -56,7 +71,7 @@
               </div>
             </div>
             <div class="one">
-              <div class="wrap"><span class="heading">Блокчейн и торговля электричеством</span><span class="article-was-added">13 августа 2016, 13:45</span><img src="images/14.jpg" alt="theme">
+              <div class="wrap"><span class="heading">Блокчейн и торговля электричеством</span><img src="images/delete.svg" alt="close" class="close"><span class="article-was-added">13 августа 2016, 13:45</span><img src="images/14.jpg" alt="theme">
                 <div class="text">
                   <strong>Австралийская компания Power Leger начала тестировать рентабельность продажи электроэнергии через технологию Блокчейн.</strong> Power Leger решили провести небольшой социальный эксперимент по покупке электроэнергии без посредников, в котором приняли участие 10 среднестатистических семей. На протяжении двух месяцев участники эксперимента будут покупать электроэнергию без посредников и накруток, используя потенциальные возможности Блокчейна. Благодаря распределенным реестрам технологии они смогут без труда отследить направление движения купленной электроэнергии и потраченных на нее денег.
                   По мнению генерального директора Power Leger Джемма Грина, использование технологии Блокчейн в схеме покупки/продажи электроэнергии для населения – наилучшее решение по финансовой социальной оптимизации дорогостоящего ресурса.
@@ -104,17 +119,22 @@
             </div>
           </div>
           <footer style="background-color:transparent;" class="sevenpay-footer">
-            <div class="wrap"><a href="#tarify" class="popup">Тарифы</a><a href="#confidentiality" class="popup">Конфиденциальность</a><a href="#faq" class="popup">FAQ</a><a href="index.php" class="popup">Главная</a><a href="#entrance" class="popup">Вход</a></div>
+            <div class="wrap"><a href="#tarify" class="popup"><span>Тарифы</span></a>
+              <a href="#confidentiality" class="popup"><span>Конфиденциальность</span></a>
+              <a href="#faq" class="popup"><span>FAQ</span></a>
+              <a href="index.php" class="popup"><span>Главная</span></a>
+              <a href="#entrance" class="popup"><span>Вход</span></a></div>
           </footer>
         </div>
       </main>
-      <div id="load-spinner">
-        <div class="loader"></div>
-      </div>
+
     </div>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/news.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <script src="scripts/jquery-3.1.0.min.js"></script>
     <script src="scripts/function.js"></script>
+    <script src="scripts/polyfill.min.js" charset="utf-8"></script>
   </body>
 </html>
